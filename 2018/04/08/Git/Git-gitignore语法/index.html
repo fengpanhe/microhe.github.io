@@ -100,18 +100,18 @@
 
 
 
-<meta name="description" content="在git仓库的根目录中创建 文件可以忽略跟踪某些文件。123456789101112131415161718192021##  主要语法1. ```#```  表示注释，需要使用 ```#``` 可以使用 ```\``` 转译。2. ```！``` 表示取反，即不忽略。但如果一个文件的父文件夹被忽略，则无效。3. ```*``` 表示任意匹配。   ```shell   build/			# 当前">
+<meta name="description" content="在git仓库的根目录中创建 .gitignore 文件可以忽略跟踪某些文件。 主要语法 #  表示注释，需要使用 # 可以使用 \ 转译。  ！ 表示取反，即不忽略。但如果一个文件的父文件夹被忽略，则无效。  * 表示任意匹配。 1234567891011build/			# 当前目录下的build被忽略*/build/		# 二级目录下的build被忽略**/build/		# 任意级目录下的b">
 <meta name="keywords" content="git,工具,.gitignore">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git-.gitignore语法">
 <meta property="og:url" content="http://yoursite.com/2018/04/08/Git/Git-gitignore语法/index.html">
 <meta property="og:site_name" content="Microhe`s Blog">
-<meta property="og:description" content="在git仓库的根目录中创建 文件可以忽略跟踪某些文件。123456789101112131415161718192021##  主要语法1. ```#```  表示注释，需要使用 ```#``` 可以使用 ```\``` 转译。2. ```！``` 表示取反，即不忽略。但如果一个文件的父文件夹被忽略，则无效。3. ```*``` 表示任意匹配。   ```shell   build/			# 当前">
+<meta property="og:description" content="在git仓库的根目录中创建 .gitignore 文件可以忽略跟踪某些文件。 主要语法 #  表示注释，需要使用 # 可以使用 \ 转译。  ！ 表示取反，即不忽略。但如果一个文件的父文件夹被忽略，则无效。  * 表示任意匹配。 1234567891011build/			# 当前目录下的build被忽略*/build/		# 二级目录下的build被忽略**/build/		# 任意级目录下的b">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-07T17:02:07.000Z">
+<meta property="og:updated_time" content="2018-04-07T17:05:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git-.gitignore语法">
-<meta name="twitter:description" content="在git仓库的根目录中创建 文件可以忽略跟踪某些文件。123456789101112131415161718192021##  主要语法1. ```#```  表示注释，需要使用 ```#``` 可以使用 ```\``` 转译。2. ```！``` 表示取反，即不忽略。但如果一个文件的父文件夹被忽略，则无效。3. ```*``` 表示任意匹配。   ```shell   build/			# 当前">
+<meta name="twitter:description" content="在git仓库的根目录中创建 .gitignore 文件可以忽略跟踪某些文件。 主要语法 #  表示注释，需要使用 # 可以使用 \ 转译。  ！ 表示取反，即不忽略。但如果一个文件的父文件夹被忽略，则无效。  * 表示任意匹配。 1234567891011build/			# 当前目录下的build被忽略*/build/		# 二级目录下的build被忽略**/build/		# 任意级目录下的b">
 
 
 
@@ -403,9 +403,21 @@
       
 
       
-        <p>在git仓库的根目录中创建 <figure class="highlight plain"><figcaption><span>文件可以忽略跟踪某些文件。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">##  主要语法</span><br><span class="line"></span><br><span class="line">1. ```#```  表示注释，需要使用 ```#``` 可以使用 ```\``` 转译。</span><br><span class="line"></span><br><span class="line">2. ```！``` 表示取反，即不忽略。但如果一个文件的父文件夹被忽略，则无效。</span><br><span class="line"></span><br><span class="line">3. ```*``` 表示任意匹配。</span><br><span class="line"></span><br><span class="line">   ```shell</span><br><span class="line"></span><br><span class="line">   build/			# 当前目录下的build被忽略</span><br><span class="line">   */build/		# 二级目录下的build被忽略</span><br><span class="line">   **/build/		# 任意级目录下的build被忽略</span><br><span class="line"></span><br><span class="line">   *.o				# 当前目录下的*.o被忽略</span><br><span class="line">   */*.o			# 二级目录下的*.o被忽略</span><br><span class="line">   **/*.o			# 任意级目录下的*.o被忽略</span><br><span class="line"></span><br><span class="line">   src/*			# src下所有文件被忽略</span><br><span class="line">   !*.cpp			# *.cpp不被忽略</span><br></pre></td></tr></table></figure></p>
-<h2 id="注意：白名单！"><a href="#注意：白名单！" class="headerlink" title="注意：白名单！"></a>注意：白名单！</h2><pre><code><figure class="highlight plain"><figcaption><span>表示取反，即不忽略。但如果一个文件的父文件夹被忽略，则无效。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">例如：要忽略src/目录下除*.cpp外的所有文件。</span><br><span class="line"></span><br><span class="line">则应为</span><br><span class="line"></span><br><span class="line">```shell</span><br><span class="line">src/*			# src下所有文件被忽略</span><br><span class="line">!*.cpp			# *.cpp不被忽略</span><br></pre></td></tr></table></figure>
-</code></pre><p>   为</p>
+        <p>在git仓库的根目录中创建 <code>.gitignore</code> 文件可以忽略跟踪某些文件。</p>
+<h2 id="主要语法"><a href="#主要语法" class="headerlink" title="主要语法"></a>主要语法</h2><ol>
+<li><p><code>#</code>  表示注释，需要使用 <code>#</code> 可以使用 <code>\</code> 转译。</p>
+</li>
+<li><p><code>！</code> 表示取反，即不忽略。但如果一个文件的父文件夹被忽略，则无效。</p>
+</li>
+<li><p><code>*</code> 表示任意匹配。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">build/			# 当前目录下的build被忽略</span><br><span class="line">*/build/		# 二级目录下的build被忽略</span><br><span class="line">**/build/		# 任意级目录下的build被忽略</span><br><span class="line"></span><br><span class="line">*.o				# 当前目录下的*.o被忽略</span><br><span class="line">*/*.o			# 二级目录下的*.o被忽略</span><br><span class="line">**/*.o			# 任意级目录下的*.o被忽略</span><br><span class="line"></span><br><span class="line">src/*			# src下所有文件被忽略</span><br><span class="line">!*.cpp			# *.cpp不被忽略</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="注意：白名单！"><a href="#注意：白名单！" class="headerlink" title="注意：白名单！"></a>注意：白名单！</h2><p><code>！</code> 表示取反，即不忽略。但如果一个文件的父文件夹被忽略，则无效。</p>
+<p>例如：要忽略src/目录下除*.cpp外的所有文件。</p>
+<p>则应为</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">src/*			# src下所有文件被忽略</span><br><span class="line">!*.cpp			# *.cpp不被忽略</span><br></pre></td></tr></table></figure>
+<p>当为</p>
   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">src/				# src下所有文件被忽略</span><br><span class="line">!*.cpp			# *.cpp不被忽略</span><br></pre></td></tr></table></figure>
 <p>时，由于src目录是被忽略的，故<code>!*.cpp</code> 不会作用于src/目录下的文件。</p>
 
@@ -604,7 +616,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#注意：白名单！"><span class="nav-number">1.</span> <span class="nav-text">注意：白名单！</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#主要语法"><span class="nav-number">1.</span> <span class="nav-text">主要语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意：白名单！"><span class="nav-number">2.</span> <span class="nav-text">注意：白名单！</span></a></li></ol></div>
             
 
           </div>
