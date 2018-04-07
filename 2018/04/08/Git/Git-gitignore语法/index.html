@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="Microhe`s Blog">
 <meta property="og:description" content="在git仓库的根目录中创建 .gitignore 文件可以忽略跟踪某些文件。 主要语法 #  表示注释，需要使用 # 可以使用 \ 转译。  ！ 表示取反，即不忽略。但如果一个文件的父文件夹被忽略，则无效。  * 表示任意匹配。 1234567891011build/			# 当前目录下的build被忽略*/build/		# 二级目录下的build被忽略**/build/		# 任意级目录下的b">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-07T17:05:12.000Z">
+<meta property="og:updated_time" content="2018-04-07T17:07:54.049Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git-.gitignore语法">
 <meta name="twitter:description" content="在git仓库的根目录中创建 .gitignore 文件可以忽略跟踪某些文件。 主要语法 #  表示注释，需要使用 # 可以使用 \ 转译。  ！ 表示取反，即不忽略。但如果一个文件的父文件夹被忽略，则无效。  * 表示任意匹配。 1234567891011build/			# 当前目录下的build被忽略*/build/		# 二级目录下的build被忽略**/build/		# 任意级目录下的b">
@@ -410,7 +410,7 @@
 <li><p><code>！</code> 表示取反，即不忽略。但如果一个文件的父文件夹被忽略，则无效。</p>
 </li>
 <li><p><code>*</code> 表示任意匹配。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">build/			# 当前目录下的build被忽略</span><br><span class="line">*/build/		# 二级目录下的build被忽略</span><br><span class="line">**/build/		# 任意级目录下的build被忽略</span><br><span class="line"></span><br><span class="line">*.o				# 当前目录下的*.o被忽略</span><br><span class="line">*/*.o			# 二级目录下的*.o被忽略</span><br><span class="line">**/*.o			# 任意级目录下的*.o被忽略</span><br><span class="line"></span><br><span class="line">src/*			# src下所有文件被忽略</span><br><span class="line">!*.cpp			# *.cpp不被忽略</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">build/			# 当前目录下的build被忽略</span><br><span class="line">*/build/		# 二级目录下的build被忽略</span><br><span class="line">**/build/		# 任意级目录下的build被忽略</span><br><span class="line"></span><br><span class="line">*.o			# 当前目录下的*.o被忽略</span><br><span class="line">*/*.o			# 二级目录下的*.o被忽略</span><br><span class="line">**/*.o			# 任意级目录下的*.o被忽略</span><br><span class="line"></span><br><span class="line">src/*			# src下所有文件被忽略</span><br><span class="line">!*.cpp			# *.cpp不被忽略</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h2 id="注意：白名单！"><a href="#注意：白名单！" class="headerlink" title="注意：白名单！"></a>注意：白名单！</h2><p><code>！</code> 表示取反，即不忽略。但如果一个文件的父文件夹被忽略，则无效。</p>
@@ -418,7 +418,7 @@
 <p>则应为</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">src/*			# src下所有文件被忽略</span><br><span class="line">!*.cpp			# *.cpp不被忽略</span><br></pre></td></tr></table></figure>
 <p>当为</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">src/				# src下所有文件被忽略</span><br><span class="line">!*.cpp			# *.cpp不被忽略</span><br></pre></td></tr></table></figure>
+  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">src/			        # src下所有文件被忽略</span><br><span class="line">!*.cpp			        # *.cpp不被忽略</span><br></pre></td></tr></table></figure>
 <p>时，由于src目录是被忽略的，故<code>!*.cpp</code> 不会作用于src/目录下的文件。</p>
 
       
